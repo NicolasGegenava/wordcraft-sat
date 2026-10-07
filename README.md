@@ -4,6 +4,8 @@ A simple SAT vocabulary quiz: a short definition, four shuffled words, and insta
 
 **No accounts. No API keys. No database. No installation required to play.**
 
+**[Play Wordcraft online](https://nicolasgegenava.github.io/wordcraft-sat/)** · [Open the single-file version](https://nicolasgegenava.github.io/wordcraft-sat/wordcraft.html)
+
 ## Play on your computer
 
 Download **wordcraft.html** from this repository and open it in your browser. It contains the entire quiz and works without an internet connection. You can send this one file to someone else.
@@ -26,7 +28,7 @@ Official instructions: [GitHub Pages workflows](https://docs.github.com/en/pages
 
 ## Use any static website host
 
-Upload just these five files into the public folder of your host:
+Upload these six files into the public folder of your host (the last one powers the offline download):
 
 ```text
 index.html
@@ -34,6 +36,7 @@ style.css
 vocab.js
 notes.js
 app.js
+wordcraft.html
 ```
 
 Set no build command and no server runtime. The start page is `index.html`. Relative asset paths work both on a domain and in a subfolder. You can also rename the self-contained `wordcraft.html` to `index.html` and upload that single file.
