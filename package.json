@@ -1,0 +1,11 @@
+{
+  "name": "wordcraft-sat",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A portable, no-dependency SAT vocabulary quiz",
+  "scripts": {
+    "test": "node scripts/check-quiz.cjs && node scripts/check-notes.cjs && node scripts/package.mjs && node scripts/check-package.cjs",
+    "build": "node scripts/package.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

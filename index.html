@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="description" content="Practice SAT vocabulary with short definitions and four shuffled word choices.">
+  <title>Wordcraft · SAT vocabulary</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%232e51db'/%3E%3Cpath d='m12 19 9 27 11-20 11 20 9-27' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+  <script src="vocab.js" defer></script><script src="notes.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="./" aria-label="Wordcraft home"><span class="mark" aria-hidden="true">w.</span>wordcraft<span class="tag">SAT VOCAB</span></a><span class="header-note">A little practice, every day.</span></header>
+  <main>
+    <div class="session-heading"><div><p class="eyebrow">VOCABULARY PRACTICE</p><h1>Find the word.</h1><p class="intro">One meaning. Four choices.</p></div><div class="round-badge">20-question round</div></div>
+    <section class="quiz" aria-label="Vocabulary quiz">
+      <div class="quiz-top"><span id="question-count">Question 1 <span>of 20</span></span><span id="score">0 correct</span></div>
+      <div class="progress" role="progressbar" aria-label="Round progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div id="progress-fill"></div></div>
+      <div id="question-view">
+        <div class="definition-area"><p class="eyebrow">WHICH WORD FITS THIS MEANING?</p><h2 id="definition" tabindex="-1"></h2></div>
+        <div id="choices" class="choices" aria-label="Answer choices"></div>
+        <div class="quiz-bottom"><p id="feedback" role="status" aria-live="polite">Choose the word that matches.</p><button id="next" class="primary" disabled>Next question</button></div>
+      </div>
+      <div id="result-view" hidden><p class="eyebrow">ROUND COMPLETE</p><h2 id="result-title">Nicely done.</h2><div class="result-score"><span id="final-score">0</span><span>/ 20</span></div><p id="result-message"></p><section class="round-review" aria-labelledby="review-title"><h3 id="review-title">Questions to revisit</h3><p id="review-summary"></p><ol id="round-mistakes" class="note-list"></ol></section><button id="restart" class="primary">Another round</button></div>
+    </section>
+    <div class="under-card"><span><span class="key">1</span><span class="key">2</span><span class="key">3</span><span class="key">4</span> to choose <span class="key enter">Enter</span> to continue</span><span id="bank-count">990 words to explore</span></div>
+    <details class="saved-notes" id="saved-notes"><summary>My missed-word notes <span id="notes-count">0</span></summary><div class="notes-body"><p id="notes-status" role="status">Saved in this browser, including after you close the page. Notes do not sync to other devices.</p><p id="notes-empty">No missed words yet. Your mistakes will be saved here automatically.</p><ol id="saved-mistakes" class="note-list"></ol></div></details>
+    <footer>Definitions from the <a href="https://img.sparknotes.com/content/testprep/pdf/sat.vocab.pdf" target="_blank" rel="noopener noreferrer">SparkNotes word list</a>. No example-sentence clues.<br><a href="wordcraft.html" download="wordcraft.html">Download the quiz for offline use</a></footer>
+  </main>
+  <noscript><p class="noscript">Please enable JavaScript to use the vocabulary quiz.</p></noscript>
+</body>
+</html>

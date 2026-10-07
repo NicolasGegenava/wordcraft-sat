@@ -1,0 +1,10 @@
+const fs=require('node:fs'),assert=require('node:assert/strict'),vm=require('node:vm');
+const html=fs.readFileSync('wordcraft.html','utf8');
+assert.ok(!/<script[^>]+src=/.test(html),'Standalone file needs no external scripts');
+assert.ok(!/<link[^>]+rel="stylesheet"/.test(html),'Standalone file needs no external stylesheet');
+const scripts=[...html.matchAll(/<script>\s*([\s\S]*?)<\/script>/g)].map(m=>m[1]);
+assert.equal(scripts.length,3);
+assert.ok(html.indexOf('<script>')>html.indexOf('id="saved-mistakes"'),'DOM must exist before scripts execute');
+for(const script of scripts)new vm.Script(script);
+for(const file of ['index.html','style.css','vocab.js','notes.js','app.js','wordcraft.html'])assert.ok(fs.existsSync('_site/'+file));
+console.log('PASS: standalone scripts, order, syntax, asset independence, and deployment files.');
